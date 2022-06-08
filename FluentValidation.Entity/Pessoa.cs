@@ -6,5 +6,6 @@ namespace FluentValidation.Entity
 	{
         [Required]
         public string Nome { get; set; }
+
     }
 }
