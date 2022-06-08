@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1703.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentValidation.API", "FluentValidation\FluentValidation.APi.csproj", "{F273738D-562B-47BE-84E6-192A77ECEE3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentValidation.Entity", "FluentValidation.Entity\FluentValidation.Entity.csproj", "{7402628D-B1EB-4F9C-9A52-32D266822B4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F273738D-562B-47BE-84E6-192A77ECEE3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F273738D-562B-47BE-84E6-192A77ECEE3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F273738D-562B-47BE-84E6-192A77ECEE3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F273738D-562B-47BE-84E6-192A77ECEE3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7402628D-B1EB-4F9C-9A52-32D266822B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7402628D-B1EB-4F9C-9A52-32D266822B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7402628D-B1EB-4F9C-9A52-32D266822B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7402628D-B1EB-4F9C-9A52-32D266822B4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {458440B7-6EB2-4CAC-A40F-86D65E24688F}
+	EndGlobalSection
+EndGlobal
