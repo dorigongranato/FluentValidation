@@ -1,11 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace FluentValidation.Entity
+﻿namespace FluentValidation.Entity
 {
-	public class Pessoa
+    public class Pessoa
 	{
-        [Required]
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
 
     }
 }
