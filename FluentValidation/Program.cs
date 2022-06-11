@@ -1,12 +1,20 @@
-﻿using FluentValidation.AspNetCore;
+﻿using FluentValidation.API.Filter;
+using FluentValidation.AspNetCore;
+using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 List<Assembly> usedAssemblies = Assembly.GetExecutingAssembly().GetReferencedAssemblies().Select((item) => Assembly.Load(item)).ToList();
 
+//builder.Services.AddMvcCore(
+//   c => c.Filters.Add(typeof(CustomValidationAttribute)));
+
 // Add services to the container.
-builder.Services.AddControllers()
+builder.Services.AddControllers(
+                //config => config.Filters.Add(typeof(CustomValidationAttribute))
+                )
+                .AddMvcOptions(options => options.Filters.Add(typeof(ModelStateValidatorFilter)))
                 .AddFluentValidation(c =>
                 c.RegisterValidatorsFromAssemblies(usedAssemblies)
                 //c.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly())

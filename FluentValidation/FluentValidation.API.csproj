@@ -15,4 +15,10 @@
     <ProjectReference Include="..\FluentValidation.Entity\FluentValidation.Entity.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Filter\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Filter\" />
+  </ItemGroup>
 </Project>

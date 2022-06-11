@@ -8,9 +8,13 @@
 
   <ItemGroup>
     <None Remove="FluentValidation.AspNetCore" />
+    <None Remove="ErrorModel\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ErrorModel\" />
   </ItemGroup>
 </Project>
