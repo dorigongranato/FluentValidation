@@ -6,21 +6,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 List<Assembly> usedAssemblies = Assembly.GetExecutingAssembly().GetReferencedAssemblies().Select((item) => Assembly.Load(item)).ToList();
 
-//builder.Services.AddMvcCore(
-//   c => c.Filters.Add(typeof(CustomValidationAttribute)));
-
 // Add services to the container.
-builder.Services.AddControllers(
-                //config => config.Filters.Add(typeof(CustomValidationAttribute))
-                )
-                //.AddMvcOptions(options => options.Filters.Add(typeof(ModelStateValidatorFilter)))
-                .AddFluentValidation(c =>
-                  
-                c.RegisterValidatorsFromAssemblies(usedAssemblies)
-                //c.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly())
+builder.Services.AddControllers().AddFluentValidation(c =>
+                    c.RegisterValidatorsFromAssemblies(usedAssemblies)
+                    //c.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly())
                 ).ConfigureApiBehaviorOptions(options =>
                 {
-                    options.InvalidModelStateResponseFactory = CustomProblemDetails.MakeValidationResponse;
+                    options.InvalidModelStateResponseFactory = CustomErrorsDetails.MakeValidationResponse;
                 });
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

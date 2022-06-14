@@ -8,8 +8,9 @@ public class PessoaValidator : AbstractValidator<Pessoa>
 
         RuleFor(p => p.Nome).MinimumLength(4).WithMessage("Precisa de 4 bytes ");
 
-        RuleFor(x => x.Nome).NotNull().NotEqual("foo")
-            .WithMessage("Escreveu foo.");
+        RuleFor(x => x.Nome).NotNull().NotEqual("foo").WithMessage("Escreveu foo.");
+
+        RuleFor(x => x.Idade).GreaterThanOrEqualTo(18).WithMessage("A idade deve ser igual ou maior que 18.");
 
     }
 }
